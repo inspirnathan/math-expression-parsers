@@ -1,0 +1,23 @@
+{
+  "name": "part-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parse": "syntax-cli -g pizza.g -m lalr1 -p 'pizza'",
+    "parse-ignore-whitespace": "syntax-cli -g pizza.g -m lalr1 -p 'pizza donut' -w",
+    "generate": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -o parser.js",
+    "tokenize": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -p 'pizza donut' --tokenize",
+    "tokenize-only": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -p 'pizza donut' --tokenize --tokenizer-only",
+    "collections": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -p 'pizza donut' -c",
+    "tables": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -p 'pizza donut' -t",
+    "debug": "syntax-cli -g pizza-semantic-actions.g -m lalr1 -p 'pizza donut' -d",
+    "help": "syntax-cli --help"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "syntax-cli": "^0.1.27"
+  }
+}

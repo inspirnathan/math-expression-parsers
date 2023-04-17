@@ -1,0 +1,15 @@
+{
+  "name": "part-12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parse": "syntax-cli -g calc.g -m ll1 -p '1 + 2'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "syntax-cli": "^0.1.27"
+  }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const fs = require('fs/promises')
+const { Parser } = require('./Parser')
+
+const parser = new Parser()
+
+async function run() {
+  try {
+    const code = await fs.readFile(process.argv[2], { encoding: 'utf8' })
+    parser.parse(code)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+run()
